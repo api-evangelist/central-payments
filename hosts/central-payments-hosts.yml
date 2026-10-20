@@ -1,0 +1,57 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - support
+  - website
+hosts:
+- host: api.central-payments.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: central-payments.com
+  role: api
+  relation: own
+- host: central-payments.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - PrivacyPolicy
+  - TermsOfService
+  - Blog
+  - Contact
+  serves:
+  - hosting
+  vendor: squarespace
+  registrable_domain: central-payments.com
+  role: website
+  relation: own
+- host: support.central-payments.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - support
+  vendor: zendesk
+  registrable_domain: central-payments.com
+  role: support
+  relation: own

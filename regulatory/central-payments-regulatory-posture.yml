@@ -1,0 +1,31 @@
+generated: '2026-10-20'
+source: "Privacy Policy"
+method: probed
+signals:
+  data_subject_request:
+    evidence:
+      - source: "Privacy Policy"
+        http_status: 200
+        fetched: "true"
+        url: https://central-payments.com/privacy-policy
+        section: "What are your rights?"
+        quote: "What are your rights? Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information."
+        note: "Indicates that data subjects have rights under applicable law."
+  data_retention:
+    evidence:
+      - source: "Privacy Policy"
+        http_status: 200
+        fetched: "true"
+        url: https://central-payments.com/privacy-policy
+        section: "collect, use, disclose, retain, and protect"
+        quote: "...to describe how we collect, use, disclose, retain, and protect (“process”) information through our business website..."
+        note: "Mentions retention of information as part of processing."
+  subprocessors:
+    evidence:
+      - source: "Privacy Policy"
+        http_status: 200
+        fetched: "true"
+        url: https://central-payments.com/privacy-policy
+        section: "In what situations and with which types of parties do we share personal information?"
+        quote: "We may share information in specific situations and with specific categories of third parties."
+        note: "Implies use of subprocessors or third‑party processors."

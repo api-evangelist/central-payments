@@ -1,23 +1,73 @@
 aid: central-payments
+
 name: Central Payments
-description: 'Central Payments is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://static1.squarespace.com/static/66cc982cdb1dd02811d78158/t/688cc545a926fc7765d8a2ea/1771431163074/CP-Logo_Stacked_Black.jpg?format=1500w
+
+description: 'Central Payments provides embedded finance solutions, offering configurable card products, funds movement, and program management for brands and banks. Their platform simplifies integration with compliance, oversight, and settlement services, delivering a unified API for payments, regulatory adherence, and customizable financial products. With a focus on transparency and innovation, Central Payments aims to streamline financial services for businesses, ensuring secure, efficient, and scalable payment experiences.'
+
 url: https://raw.githubusercontent.com/api-evangelist/central-payments/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
 - Company
-apis: []
+- Fintech
+- Payments
+- EmbeddedFinance
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/central-payments-hosts.yml
+- type: Vendors
+  url: vendors/central-payments-vendors.yml
+- type: Support
+  url: https://support.central-payments.com/hc/en-us
+- type: DomainSecurity
+  url: security/central-payments-domain-security.yml
 - type: Website
   url: https://central-payments.com/
+
+- type: PrivacyPolicy
+  url: https://central-payments.com/privacy-policy
+- type: TermsOfService
+  url: https://central-payments.com/terms-of-use
+- type: Blog
+  url: https://central-payments.com/insights
+- type: Contact
+  url: https://central-payments.com/contact-us
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The website provides only marketing pages with no machine‑readable API specification.
+  evidence:
+    - url: https://central-payments.com
+      status: 200
+  checked: '2026-10-20'
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
